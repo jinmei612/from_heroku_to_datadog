@@ -1,0 +1,6 @@
+init_config:
+  
+instances:
+  - name: heroku test
+    url: https://github.com/DataDog/heroku-buildpack-datadog#enabling-integrations
+    timeout: 5
