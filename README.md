@@ -61,7 +61,7 @@ Run git push heroku master to create a new release using these buildpacks.
 
 
 - Note your Datadog API KEY: https://app.datadoghq.com/account/settings#api create a new one if you don't have one yet.
-Set your datadog api key in your project by running. Make sure you have DD_DYNO_HOST set to true and that HEROKU_APP_NAME has a value set for every Heroku application 
+Set your datadog api key in your project by running. Make sure you have `DD_DYNO_HOST` set to true and that `HEROKU_APP_NAME` has a value set for every Heroku application 
 
 `heroku config:add DD_API_KEY=<your_own_api_key_here>`
 `heroku config:add DD_DYNO_HOST=true`
