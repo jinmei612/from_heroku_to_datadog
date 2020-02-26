@@ -67,6 +67,7 @@ Set your datadog api key in your project by running. Make sure you have `DD_DYNO
 `heroku config:add DD_DYNO_HOST=true`
 `heroku config:add HEROKU_APP_NAME=<your-app-name>`
 
+
 Sample output:
 ```
 > heroku config:add DD_API_KEY=<your_own_api_key_here>
@@ -74,7 +75,15 @@ Setting DD_API_KEY and restarting ⬢ gentle-plains-40923... done, v3
 DD_API_KEY: <your_own_api_key_here>
 ```
 
+- Set datadog env tag for the host and APM environment 
+`heroku config:add DD_TAGS="env:heroku_datadog"`
 
+Sample Output:
+```
+> heroku config:add DD_TAGS="env:heroku_datadog"
+Setting DD_TAGS and restarting ⬢ gentle-plains-40923... done, v10
+DD_TAGS: env:heroku
+```
 
 - `cd` into your Heroku project directory and download the files in this repo (app.py, Procfile, requirements.txt, runtime.txt). (Optionally, you can also include the `datadog` folder in your project which enable integrations: [doc](https://github.com/DataDog/heroku-buildpack-datadog#enabling-integrations))
 
