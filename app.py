@@ -25,11 +25,10 @@ def bubble_tea():
 	get_ice_level = random.choice(ice_level)
 	get_sugar_level = random.choice(sugar_level)
 
-	statsd.increment("bubble_tea.count", tags=["submission_method:dogstatsd","submission_from:heroku","topping:"+get_topping],"drink_type:"+get_drink_type)
-	statsd.gauge("bubble_tea.gauge", random.randint(100, 999), tags=["submission:dogstatsd","submission_from:heroku","topping:"+get_topping],"drink_type:"+get_drink_type)
-	statsd.histogram('bubble_tea.histogram', random.randint(10, 99),tags=["submission:dogstatsd","submission_from:heroku","topping:"+get_topping],"drink_type:"+get_drink_type)
-	statsd.distribution('bubble_tea.distribution', random.randint(1, 9),tags=["submission:dogstatsd","submission_from:heroku","topping:"+get_topping],"drink_type:"+get_drink_type)
-    
+	statsd.increment("bubble_tea.count", tags=["submission_method:dogstatsd","submission_from:heroku","topping:"+get_topping,"drink_type:"+get_drink_type])
+	statsd.gauge("bubble_tea.gauge", random.randint(100, 999), tags=["submission:dogstatsd","submission_from:heroku","topping:"+get_topping,"drink_type:"+get_drink_type])
+	statsd.histogram('bubble_tea.histogram', random.randint(10, 99),tags=["submission:dogstatsd","submission_from:heroku","topping:"+get_topping,"drink_type:"+get_drink_type])
+	statsd.distribution('bubble_tea.distribution', random.randint(1, 9),tags=["submission:dogstatsd","submission_from:heroku","topping:"+get_topping,"drink_type:"+get_drink_type])
 	return "hello world"
     
 if __name__ == '__main__':
