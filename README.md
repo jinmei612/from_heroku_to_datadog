@@ -48,6 +48,8 @@ Sample Output:
 Enabling runtime-dyno-metadata for gentle-plains-40923... done
 ```
 
+* Use Datadog To Monitor Heroku App
+
 - Now add the monitoring buildpack Datadog by runnning `heroku buildpacks:add https://github.com/DataDog/heroku-buildpack-datadog.git`
 
 Sample output:
