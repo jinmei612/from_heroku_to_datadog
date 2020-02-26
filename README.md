@@ -21,6 +21,7 @@ Creating app... done, ⬢ gentle-plains-40923
 https://gentle-plains-40923.herokuapp.com/ | https://git.heroku.com/gentle-plains-40923.git
 ```
 
+
 - Switch to your project by running `heroku git:remote -a <your-heroku-project-name>`
 
 Sample output:
@@ -28,6 +29,7 @@ Sample output:
 > heroku git:remote -a gentle-plains-40923
 set git remote heroku to https://git.heroku.com/gentle-plains-40923.git
 ```
+
 
 - This app is written in Python, so we are going to add the language buildpack by running `heroku buildpacks:add heroku/python`
 
@@ -37,6 +39,7 @@ Sample Output:
 Buildpack added. Next release on gentle-plains-40923 will use heroku/python.
 Run git push heroku master to create a new release using this buildpack.
 ```
+
 
 - Enable Heroku Labs Dyno Metadata by running `heroku labs:enable runtime-dyno-metadata -a $(heroku apps:info|grep ===|cut -d' ' -f2)`
 Sample Output:
@@ -55,6 +58,7 @@ Buildpack added. Next release on gentle-plains-40923 will use:
   2. https://github.com/DataDog/heroku-buildpack-datadog.git
 Run git push heroku master to create a new release using these buildpacks.
 ```
+
 
 - Note your Datadog API KEY: https://app.datadoghq.com/account/settings#api create a new one if you don't have one yet.
 Set your datadog api key in your project by running. Make sure you have DD_DYNO_HOST set to true and that HEROKU_APP_NAME has a value set for every Heroku application 
@@ -85,6 +89,7 @@ git push heroku master
 
 
 Reference:
+
 https://docs.datadoghq.com/agent/basic_agent_usage/heroku/ 
 
 https://github.com/DataDog/heroku-buildpack-datadog
