@@ -19,7 +19,6 @@ Sample output:
 > heroku create
 Creating app... done, ⬢ gentle-plains-40923
 https://gentle-plains-40923.herokuapp.com/ | https://git.heroku.com/gentle-plains-40923.git
-
 ```
 
 - Switch to your project by running `heroku git:remote -a <your-heroku-project-name>`
@@ -87,4 +86,7 @@ git push heroku master
 
 Reference:
 https://docs.datadoghq.com/agent/basic_agent_usage/heroku/ 
+
 https://github.com/DataDog/heroku-buildpack-datadog
+
+https://devcenter.heroku.com/articles/getting-started-with-python?singlepage=true
