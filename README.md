@@ -42,6 +42,7 @@ Run git push heroku master to create a new release using this buildpack.
 
 
 - Enable Heroku Labs Dyno Metadata by running `heroku labs:enable runtime-dyno-metadata -a $(heroku apps:info|grep ===|cut -d' ' -f2)`
+
 Sample Output:
 ```
 > heroku labs:enable runtime-dyno-metadata -a $(heroku apps:info|grep ===|cut -d' ' -f2)
