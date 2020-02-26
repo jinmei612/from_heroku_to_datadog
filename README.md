@@ -13,6 +13,7 @@ This repo will show you how to send metrics and traces from your heroku app to d
 
 # Create Heroku Project
 - You can go to your [heroku dashboard](https://dashboard.heroku.com/apps) and click `New` -> `Create new app`, or run `heroku create` in your terminal to create a new Heroku project (Download and install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line))
+
 Sample output:
  ```
 > heroku create
@@ -22,6 +23,7 @@ https://gentle-plains-40923.herokuapp.com/ | https://git.heroku.com/gentle-plain
 ```
 
 - Switch to your project by running `heroku git:remote -a <your-heroku-project-name>`
+
 Sample output:
 ```
 > heroku git:remote -a gentle-plains-40923
@@ -29,6 +31,7 @@ set git remote heroku to https://git.heroku.com/gentle-plains-40923.git
 ```
 
 - This app is written in Python, so we are going to add the language buildpack by running `heroku buildpacks:add heroku/python`
+
 Sample Output:
 ```
 > heroku buildpacks:add heroku/python
@@ -44,6 +47,7 @@ Enabling runtime-dyno-metadata for gentle-plains-40923... done
 ```
 
 - Now add the monitoring buildpack Datadog by runnning `heroku buildpacks:add https://github.com/DataDog/heroku-buildpack-datadog.git`
+
 Sample output:
 ```
 > heroku buildpacks:add https://github.com/DataDog/heroku-buildpack-datadog.git
@@ -57,6 +61,7 @@ Run git push heroku master to create a new release using these buildpacks.
 Set your datadog api key in your project by running 
 
 `heroku config:add DD_API_KEY=<your_own_api_key_here>`
+
 Sample output:
 ```
 > heroku config:add DD_API_KEY=<your_own_api_key_here>
@@ -64,13 +69,18 @@ Setting DD_API_KEY and restarting ⬢ gentle-plains-40923... done, v3
 DD_API_KEY: <your_own_api_key_here>
 ```
 
-DO SOMETHING HERE..add app.py and etc
+- `cd` into your Heroku project directory and download the files in this repo (app.py, Procfile, requirements.txt, runtime.txt). (Optionally, you can also include the `datadog` folder in your project which enable integrations: [doc](https://github.com/DataDog/heroku-buildpack-datadog#enabling-integrations))
 
 
-- deploy your Heroku app
+- Deploy your Heroku app (be patient, it takes some time)
 
-`git push heroku master`
+```
+git add .
+git commit -am "make it better"
+git push heroku master
+```
 
 
 Reference:
 https://docs.datadoghq.com/agent/basic_agent_usage/heroku/ 
+https://github.com/DataDog/heroku-buildpack-datadog
