@@ -3,7 +3,7 @@
 
 - Datadog is a Service as a service (SaaS) monitoring and analytics tool that can be used to monitor your heroku applications.
 
-This repo will show you how to send metrics and traces from your heroku app to datadog
+This repo will show you how to monitor the performance of your Heroku webapp in Datadog.
 
 
 # Getting Started
@@ -62,8 +62,8 @@ Run git push heroku master to create a new release using these buildpacks.
 ```
 
 
-- Note your Datadog API KEY: https://app.datadoghq.com/account/settings#api create a new one if you don't have one yet.
-Set your datadog api key in your project by running. Make sure you have `DD_DYNO_HOST` set to true and that `HEROKU_APP_NAME` has a value set for every Heroku application 
+- Note down your Datadog API key: https://app.datadoghq.com/account/settings#api create a new one if you don't have one yet.
+Set your datadog api key in your project and make sure you have `DD_DYNO_HOST` set to true and that `HEROKU_APP_NAME` has a value set for every Heroku application 
 
 `heroku config:add DD_API_KEY=<your_own_api_key_here>`
 `heroku config:add DD_DYNO_HOST=true`
@@ -78,19 +78,20 @@ DD_API_KEY: <your_own_api_key_here>
 ```
 
 - Set datadog env tag for the host and APM environment 
-`heroku config:add DD_TAGS="env:heroku_datadog"`
+`heroku config:add DD_TAGS="env:heroku"`
+`heroku config:add DD_APM_ENV=heroku_datadog`
 
 Sample Output:
 ```
-> heroku config:add DD_TAGS="env:heroku_datadog"
+> heroku config:add DD_TAGS="env:heroku"
 Setting DD_TAGS and restarting ⬢ gentle-plains-40923... done, v10
 DD_TAGS: env:heroku
 ```
 
-- `cd` into your Heroku project directory and download the files in this repo (app.py, Procfile, requirements.txt, runtime.txt). (Optionally, you can also include the `datadog` folder in your project which enable integrations: [doc](https://github.com/DataDog/heroku-buildpack-datadog#enabling-integrations))
+- `cd` into your Heroku project directory and download the files in this repo (app.py, Procfile, requirements.txt, runtime.txt). (Optionally, you can also include  `datadog/config.d/http_check.yaml` in your project which enables the http_check integration: [doc](https://github.com/DataDog/heroku-buildpack-datadog#enabling-integrations))
 
 
-- Deploy your Heroku app (be patient, it takes some time)
+- Deploy your Heroku app (be patient, it takes time)
 
 ```
 git add .
