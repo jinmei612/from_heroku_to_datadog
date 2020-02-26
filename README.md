@@ -104,6 +104,17 @@ git commit -am "make it better"
 git push heroku master
 ```
 
+- Now go into your Datadog account and check the performance of your application and dyno
+
+  https://app.datadoghq.com/infrastructure 
+
+  https://app.datadoghq.com/apm/services
+
+- It's time to be creative now! 
+  Here is a sample dashboard that helps me to decide which bubble tea should I order for the day.
+
+  https://p.datadoghq.com/sb/4d8a719d2-b022699bae85db7f21832d76b34d1f4f 
+
 
 Reference:
 
