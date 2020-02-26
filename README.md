@@ -15,7 +15,7 @@ This repo will show you how to send metrics and traces from your heroku app to d
 - You can go to your [heroku dashboard](https://dashboard.heroku.com/apps) and click `New` -> `Create new app`, or run `heroku create` in your terminal to create a new Heroku project (Download and install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line))
 
 Sample output:
- ```
+```
 > heroku create
 Creating app... done, ⬢ gentle-plains-40923
 https://gentle-plains-40923.herokuapp.com/ | https://git.heroku.com/gentle-plains-40923.git
@@ -58,9 +58,11 @@ Run git push heroku master to create a new release using these buildpacks.
 ```
 
 - Note your Datadog API KEY: https://app.datadoghq.com/account/settings#api create a new one if you don't have one yet.
-Set your datadog api key in your project by running 
+Set your datadog api key in your project by running. Make sure you have DD_DYNO_HOST set to true and that HEROKU_APP_NAME has a value set for every Heroku application 
 
 `heroku config:add DD_API_KEY=<your_own_api_key_here>`
+`heroku config:add DD_DYNO_HOST=true`
+`heroku config:add HEROKU_APP_NAME=<your-app-name>`
 
 Sample output:
 ```
@@ -68,6 +70,8 @@ Sample output:
 Setting DD_API_KEY and restarting ⬢ gentle-plains-40923... done, v3
 DD_API_KEY: <your_own_api_key_here>
 ```
+
+
 
 - `cd` into your Heroku project directory and download the files in this repo (app.py, Procfile, requirements.txt, runtime.txt). (Optionally, you can also include the `datadog` folder in your project which enable integrations: [doc](https://github.com/DataDog/heroku-buildpack-datadog#enabling-integrations))
 
