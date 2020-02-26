@@ -106,6 +106,8 @@ git commit -am "make it better"
 git push heroku master
 ```
 
+- `curl <your-app-url>` to generate some `bubble_tea.*` metrics and traces
+
 - Now go into your Datadog account and check the performance of your application and dyno
 
   https://app.datadoghq.com/infrastructure 
