@@ -83,7 +83,9 @@ DD_API_KEY: <your_own_api_key_here>
 ```
 
 - Set datadog env tag for the host and APM environment 
+
 `heroku config:add DD_TAGS="env:heroku"`
+
 `heroku config:add DD_APM_ENV=heroku_datadog`
 
 Sample Output:
