@@ -142,4 +142,4 @@ https://github.com/DataDog/heroku-buildpack-datadog
 https://devcenter.heroku.com/articles/getting-started-with-python?singlepage=true
 
 # More
-Learn more about distributed tracing -> https://github.com/jinmei612/from_heroku_to_datadog_distributed_tracing
+Learn more about distributed tracing and send heroku logs to Datadog-> https://github.com/jinmei612/from_heroku_to_datadog_advanced
