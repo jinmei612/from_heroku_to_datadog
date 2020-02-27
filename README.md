@@ -12,9 +12,11 @@ This repo will show you how to monitor the performance of your Heroku webapp in 
 
 
 # Create Heroku Project
-- Download and install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line) and run `heroku login` to login in your terminal
+- Download and install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line)
 
-- Run the following in your terminal to create a new Heroku project (You can also go to your [heroku dashboard](https://dashboard.heroku.com/apps) and click `New` -> `Create new app`)
+- Run `heroku login` to login in your terminal
+
+- Run the following in your terminal to create a new Heroku project (You can also go to your [heroku dashboard](https://dashboard.heroku.com/apps) and click `New` -> `Create new app` to create a new project)
 
 ```
 mkdir your-heroku-project
@@ -130,6 +132,7 @@ git push heroku master
   https://p.datadoghq.com/sb/4d8a719d2-b022699bae85db7f21832d76b34d1f4f 
 
 
+
 # Reference:
 
 https://docs.datadoghq.com/agent/basic_agent_usage/heroku/ 
@@ -137,3 +140,6 @@ https://docs.datadoghq.com/agent/basic_agent_usage/heroku/
 https://github.com/DataDog/heroku-buildpack-datadog
 
 https://devcenter.heroku.com/articles/getting-started-with-python?singlepage=true
+
+# More
+Learn more about distributed tracing -> https://github.com/jinmei612/from_heroku_to_datadog_distributed_tracing
