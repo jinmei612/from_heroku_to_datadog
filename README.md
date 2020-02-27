@@ -12,7 +12,16 @@ This repo will show you how to monitor the performance of your Heroku webapp in 
 
 
 # Create Heroku Project
-- You can go to your [heroku dashboard](https://dashboard.heroku.com/apps) and click `New` -> `Create new app`, or run `heroku create` in your terminal to create a new Heroku project (Download and install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line))
+- Download and install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line) and run `heroku login` to login in your terminal
+
+- Run the following in your terminal to create a new Heroku project (You can also go to your [heroku dashboard](https://dashboard.heroku.com/apps) and click `New` -> `Create new app`)
+
+```
+mkdir your-heroku-project
+cd your-heroku-project
+heroku create
+git init
+```
 
 Sample output:
 ```
@@ -20,7 +29,6 @@ Sample output:
 Creating app... done, ⬢ gentle-plains-40923
 https://gentle-plains-40923.herokuapp.com/ | https://git.heroku.com/gentle-plains-40923.git
 ```
-
 
 - Switch to your project by running `heroku git:remote -a <your-heroku-project-name>`
 
@@ -71,7 +79,9 @@ Set your datadog api key in your project and make sure you have `DD_DYNO_HOST` s
 
 `heroku config:add DD_DYNO_HOST=true`
 
-`heroku config:add HEROKU_APP_NAME=<your-app-name>`
+
+
+`heroku config:add HEROKU_APP_NAME=<your-app-name>` (run `heroku config`, if `HEROKU_APP_NAME` is already set, skip this step)
 
 
 
